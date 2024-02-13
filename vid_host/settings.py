@@ -51,6 +51,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "api.rangemiddleware.RangesMiddleware",
 ]
 
 ROOT_URLCONF = "vid_host.urls"
@@ -135,6 +136,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 # Base url to serve media files
-MEDIA_URL = '/media/'
+MEDIA_URL = '/api/media/'
 # Path where media is stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')

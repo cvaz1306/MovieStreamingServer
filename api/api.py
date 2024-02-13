@@ -5,5 +5,5 @@ from vid_host import settings
 from . import views
 urlpatterns=[
     path('list', view=views.movies),
-    
+    path('media/<path:file_name>',view=views.DownloadFile),
 ]
