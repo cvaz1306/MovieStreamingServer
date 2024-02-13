@@ -13,3 +13,4 @@ def movies(request):
         } for m in Movie.objects.all()
         ], safe=False
                         )
+    
