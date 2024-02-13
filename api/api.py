@@ -4,5 +4,6 @@ from django.conf.urls.static import static
 from vid_host import settings
 from . import views
 urlpatterns=[
-    path('list', view=views.movies)
+    path('list', view=views.movies),
+    
 ]
