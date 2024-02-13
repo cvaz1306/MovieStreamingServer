@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Movie Streaming Service</title>
+    <link href="/static/watch.css" rel="stylesheet">
+</head>
+
+<body class="a">
+    <header class="a">
+        <nav style="display: inline;">
+            <a href="/watch">Home</a>
+            <a href="/management">Management</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Recommended Movies</h2>
+        <div class="movies">
+            {% for movie in movies %}
+            <div class="movie">
+                <a href="/watch/watch/{{ movie.id }}/">
+                    <img src="{{ movie.thumbnail.url }}" alt="{{ movie.title }}">
+                    <h3>{{ movie.title }}</h3>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

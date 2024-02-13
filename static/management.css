@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #555;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #777;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.add-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+.trash-icon-link {
+    color: #c62828;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.trash-icon-link:hover {
+    color: #b71c1c;
+}
+
+.add-movie-section {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.add-movie-form {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    min-width: 700px;
+}
+
+.add-movie-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.add-movie-form input[type="text"],
+.add-movie-form input[type="file"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-movie-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-movie-form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Add these styles to your management.css file */
+
+.add-movie-form {
+    max-width: 400px;
+    /* Adjust the width as needed */
+    margin: 0 auto;
+    /* Center the form horizontally */
+}
+
+.add-movie-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.add-movie-form input[type="text"],
+.add-movie-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-movie-form button {
+    width: 100%;
+    /* Make the button full width */
+}

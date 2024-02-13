@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Page - Home Movie Streaming Service</title>
+    <link rel="stylesheet" href="/static/management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="/static/resizethumbnail.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/watch">Home</a>
+            <a href="/management">Management</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div style="display: inline;">
+            <h2>Movies</h2>
+            <div class="add-movie-section">
+                <h3>Add Movie</h3>
+                <div class="add-movie-form">
+                    <form method="post" enctype="multipart/form-data" action="">
+                        {% csrf_token %}
+                        <div>
+                            <label for="id_title">Title:</label>
+                            <input type="text" id="id_title" name="title">
+                        </div>
+                        <div>
+                            <label for="id_movie">Movie File:</label>
+                            <input type="file" id="id_movie" name="movie">
+                        </div>
+                        <div>
+                            <label for="id_thumbnail">Thumbnail:</label>
+                            <input type="file" id="id_thumbnail" name="thumbnail" onchange="resizeThumbnail()">
+                        </div>
+                        <button type="submit">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Manage</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie in movies %}
+                <tr>
+                    <td>{{ movie.title }}</td>
+                    <td>
+                        <a href="/management/delete/{{movie.id}}" class="trash-icon-link">
+                            <i class="fas fa-trash-alt"></i> Delete
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
