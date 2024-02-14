@@ -18,7 +18,18 @@
     <div class="container">
         <h2>Recommended Movies</h2>
         <div class="movies">
-            {% for movie in movies %}
+            {% for movie in recommended %}
+            <div class="movie">
+                <a href="/watch/watch/{{ movie.id }}/">
+                    <img src="{{ movie.thumbnail.url }}" alt="{{ movie.title }}">
+                    <h3>{{ movie.title }}</h3>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <h2>All Movies</h2>
+        <div class="movies">
+            {% for movie in f20movies %}
             <div class="movie">
                 <a href="/watch/watch/{{ movie.id }}/">
                     <img src="{{ movie.thumbnail.url }}" alt="{{ movie.title }}">

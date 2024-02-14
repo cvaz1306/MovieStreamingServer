@@ -20,9 +20,9 @@ from django.conf.urls.static import static
 from vid_host import settings
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
     path("management/",include('management.urls')),
     path("watch/",include('watch.urls')),
+    path("",include("watch.urls")),
     path('api/',include('api.api')),
 ]
 
